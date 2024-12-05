@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="sytle.css" media="screen" />
+    <title>Autenticação com Firebase e Limite de Tempo</title>
+  </head>
+
+  <body>
+    <div class="container" id="auth-container">
+      <section id="login-section">
+        <h2>Login</h2>
+        <div class="form-group">
+          <input type="email" id="login-email" placeholder="Email" required />
+          <input
+            type="password"
+            id="login-password"
+            placeholder="Senha"
+            required
+          />
+          <button id="login-btn">Login</button>
+        </div>
+      </section>
+
+      <section id="signup-section">
+        <h2>Cadastro</h2>
+        <div class="form-group">
+          <input type="email" id="signup-email" placeholder="Email" required />
+          <input
+            type="password"
+            id="signup-password"
+            placeholder="Senha"
+            required
+          />
+          <button id="signup-btn">Cadastrar</button>
+        </div>
+      </section>
+
+      <button id="logout-btn">Logout</button>
+    </div>
+
+    <div class="container" id="success-message">
+      <h2>Parabéns!</h2>
+      <p>Você agora tem um banco de dados de autenticação.</p>
+      <p id="timeout-message">Seu tempo na página está prestes a expirar!</p>
+      <p id="timer">Tempo restante: <span id="time-remaining"></span></p>
+      <button id="logout-success-btn">Logout</button>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="firebase.config.js" type="module"></script>
+  </body>
+</html>
